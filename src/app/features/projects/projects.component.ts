@@ -32,6 +32,7 @@ export class ProjectsComponent {
       statusKey: 'projects.mateapp_status',
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront'],
+      screenshot: 'assets/images/mateapp-demo.gif',
       links: [{ labelKey: 'projects.view_project', url: '#' }],
     },
     {
