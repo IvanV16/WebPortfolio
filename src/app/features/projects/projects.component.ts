@@ -11,6 +11,7 @@ interface Project {
   statusKey: string;
   variant:   string;
   tech:      string[];
+  screenshot?: string;
   highlights?: string[];
   links: { labelKey: string; url: string }[];
 }
@@ -40,6 +41,7 @@ export class ProjectsComponent {
       statusKey: 'projects.pedidosimple_status',
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk', 'RDS'],
+      screenshot: 'assets/images/pedidosimple-demo.gif',
       links: [{ labelKey: 'projects.view_project', url: '#' }],
     },
     {

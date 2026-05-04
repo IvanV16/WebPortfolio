@@ -12,7 +12,14 @@
         <article class="project-card" [appAnimateOnScroll]="i * 80">
           <!-- Screenshot placeholder -->
           <div class="project-card__screenshot" aria-hidden="true">
-            <span class="screenshot-label">{{ project.nameKey | translate }}</span>
+            @if (project.screenshot) {
+              <img class="project-card__screenshot-img"
+                   [src]="project.screenshot"
+                   [alt]="project.nameKey | translate"
+                   loading="lazy" />
+            } @else {
+              <span class="screenshot-label">{{ project.nameKey | translate }}</span>
+            }
           </div>
 
           <div class="project-card__body">
