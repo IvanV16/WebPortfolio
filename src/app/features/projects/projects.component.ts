@@ -52,6 +52,7 @@ export class ProjectsComponent {
       statusKey: 'projects.clario_status',
       variant:   'launched',
       tech:      ['Tauri', 'Angular', 'Rust', 'Windows'],
+      screenshot: 'assets/images/clario-demo.gif',
       highlights: ['projects.clario_h1', 'projects.clario_h2', 'projects.clario_h3'],
       links: [
         { labelKey: 'projects.clario_view_ph', url: 'https://www.producthunt.com' },
@@ -65,6 +66,7 @@ export class ProjectsComponent {
       statusKey: 'projects.localconnect_status',
       variant:   'progress',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'SQLite'],
+      screenshot: 'assets/images/localconnect-demo.gif',
       links: [],
     },
   ];
