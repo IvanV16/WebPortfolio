@@ -19,24 +19,20 @@ export class ContactComponent {
   status  = signal<FormStatus>('idle');
 
   readonly EMAIL    = 'ivan.vd07@gmail.com';
-  readonly LINKEDIN = '#placeholder';
-  readonly GITHUB   = '#placeholder';
+  readonly LINKEDIN = 'https://www.linkedin.com/in/ivan-vallejos-716a1415b';
+  readonly GITHUB   = 'https://github.com/IvanV16';
 
-  async submit(e: Event) {
+  submit(e: Event) {
     e.preventDefault();
     this.status.set('sending');
 
     try {
-      const res = await fetch('https://formspree.io/f/placeholder', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: this.name(),
-          email: this.email(),
-          message: this.message(),
-        }),
-      });
-      this.status.set(res.ok ? 'success' : 'error');
+      const subject = encodeURIComponent(`Portfolio contact from ${this.name()}`);
+      const body = encodeURIComponent(
+        `Name: ${this.name()}\nEmail: ${this.email()}\n\nMessage:\n${this.message()}`
+      );
+      window.location.href = `mailto:${this.EMAIL}?subject=${subject}&body=${body}`;
+      this.status.set('success');
     } catch {
       this.status.set('error');
     }

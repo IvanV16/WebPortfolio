@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Inicio",
     "experience": "Experiencia",
@@ -11,7 +11,7 @@
     "greeting": "Hola, soy Iván",
     "role": "Desarrollador Full-Stack (.NET & Angular)",
     "tagline": "Construyo productos reales para usuarios reales — y los entrego rápido.",
-    "humor": "// 8 años adentro, todavía me emociona un git log limpio",
+    "humor": "// 8 años de \"funciona en mi máquina\", ahora con IA como copiloto",
     "cta_work": "Ver mis proyectos",
     "cta_contact": "Hablemos"
   },
@@ -49,7 +49,15 @@
     "sa_period": "2019 – 2021",
     "sa_b1": "Construí funcionalidades de admisión y gestión de inscripciones para instituciones educativas.",
     "sa_b2": "Entregué features completos desde el frontend Angular hasta el backend .NET.",
-    "sa_b3": "Mejoré flujos de formularios y reduje la fricción para usuarios administrativos."
+    "sa_b3": "Mejoré flujos de formularios y reduje la fricción para usuarios administrativos.",
+    "internal_company": "Proyectos Internos de Devlights",
+    "internal_location": "Argentina",
+    "internal_role": "Desarrollador Full Stack",
+    "internal_period": "2017 – 2026",
+    "internal_b1": "Desarrollé herramientas internas para gestión de clientes y usuarios.",
+    "internal_b2": "Contribuí al sitio de la empresa y a plataformas internas.",
+    "internal_b3": "Trabajé en múltiples aplicaciones web de distintos dominios.",
+    "internal_b4": "Construí una landing de simulación SPA consumiendo APIs REST."
   },
   "projects": {
     "title": "Proyectos",
@@ -103,6 +111,6 @@
   },
   "footer": {
     "copyright": "© 2026 Ivan Vallejos. Todos los derechos reservados.",
-    "humor": "Hecho con Angular, café y algo de angustia existencial moderada."
+    "humor": "Hecho con Angular, Mates y sin cortes de luz durante el deploy."
   }
 }

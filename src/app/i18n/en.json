@@ -11,7 +11,7 @@
     "greeting": "Hi, I'm Ivan",
     "role": "Full-Stack Developer (.NET & Angular)",
     "tagline": "I build real products for real users — and I ship fast.",
-    "humor": "// 8 years in, still excited about a clean git log",
+    "humor": "// 8 years of \"it works on my machine\", now with AI as co-pilot",
     "cta_work": "View My Work",
     "cta_contact": "Get in Touch"
   },
@@ -49,7 +49,15 @@
     "sa_period": "2019 – 2021",
     "sa_b1": "Built admissions and enrollment management features for US educational institutions.",
     "sa_b2": "Delivered end-to-end features across Angular frontend and .NET backend.",
-    "sa_b3": "Improved form workflows and reduced data-entry friction for admin users."
+    "sa_b3": "Improved form workflows and reduced data-entry friction for admin users.",
+    "internal_company": "Internal Devlights Projects",
+    "internal_location": "Argentina",
+    "internal_role": "Full Stack Developer",
+    "internal_period": "2017 – 2026",
+    "internal_b1": "Developed internal tools for client and user management.",
+    "internal_b2": "Contributed to company website and internal platforms.",
+    "internal_b3": "Worked on multiple web applications across different domains.",
+    "internal_b4": "Built a single-page simulation landing (SPA) consuming REST APIs."
   },
   "projects": {
     "title": "Projects",
@@ -103,6 +111,6 @@
   },
   "footer": {
     "copyright": "© 2026 Ivan Vallejos. All rights reserved.",
-    "humor": "Built with Angular, coffee, and mild existential dread."
+    "humor": "Built with Angular, Mates, and no outages during deploy."
   }
 }

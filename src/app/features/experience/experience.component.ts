@@ -46,6 +46,12 @@ export class ExperienceComponent {
       expanded: false,
       bullets: ['b1', 'b2', 'b3'],
     },
+    {
+      prefix: 'internal',
+      tech: ['.NET / ASP.NET Core', 'Angular (v13-15, v18, v20)', 'SQL Server', 'PostgreSQL'],
+      expanded: false,
+      bullets: ['b1', 'b2', 'b3', 'b4'],
+    },
   ]);
 
   toggle(index: number) {

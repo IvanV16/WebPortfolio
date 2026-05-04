@@ -139,28 +139,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-
-  // Duotone: strip the image's own colour so it blends with the blue background
-  mix-blend-mode: luminosity;
-  opacity: 0.88;
 }
 
-// ── Blue tint overlay (second duotone layer) ───────────────────
-// Adds a directional blue cast that prevents the image reading as pure greyscale
-.hero__photo-overlay {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    160deg,
-    rgba(59, 130, 246, 0.28) 0%,
-    rgba(37,  99, 235, 0.10) 60%,
-    rgba(96, 165, 250, 0.22) 100%
-  );
-  mix-blend-mode: screen;
-  pointer-events: none;
-  z-index: 1;
-}
 
 // ── Monogram placeholder (shown when photo file not yet added) ─
 .hero__photo-placeholder {
@@ -225,3 +205,4 @@
   80%  { opacity: 0; top: 16px; }
   100% { opacity: 0; top: 5px; }
 }
+

@@ -35,7 +35,17 @@ export class SkillsComponent {
     },
     {
       labelKey: 'skills.tools',
-      items: ['Git', 'Clean Architecture', 'SOLID Principles', 'Agile / Scrum', 'AI-assisted dev'],
+      items: [
+        'Git',
+        'Clean Architecture',
+        'SOLID Principles',
+        'Agile / Scrum',
+        'AI-assisted development',
+        'ChatGPT',
+        'Codex',
+        'Claude',
+        'Claude Code',
+      ],
     },
   ];
 }
