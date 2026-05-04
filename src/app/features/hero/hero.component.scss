@@ -1,0 +1,131 @@
+@use '../../../styles/mixins' as m;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 64px; // navbar height
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero__text {
+  max-width: 700px;
+  text-align: center;
+
+  @include m.respond-to('lg') { text-align: left; }
+}
+
+.hero__greeting {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.hero__role {
+  font-size: clamp(2rem, 5vw, var(--text-5xl));
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  animation: fadeSlideUp 0.7s 0.1s ease both;
+}
+
+.hero__tagline {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 1rem;
+  animation: fadeSlideUp 0.7s 0.2s ease both;
+
+  @include m.respond-to('lg') { margin: 0 0 1rem; }
+}
+
+.hero__humor {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  animation: fadeSlideUp 0.7s 0.3s ease both;
+
+  &::before { content: ''; }
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeSlideUp 0.7s 0.4s ease both;
+
+  @include m.respond-to('lg') { justify-content: flex-start; }
+}
+
+// ── Scroll hint ────────────────────────────────────────────────
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2.5s 1.5s ease-in-out infinite;
+}
+
+.scroll-dot {
+  width: 22px;
+  height: 36px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: var(--radius-full);
+    animation: scrollDot 1.8s ease-in-out infinite;
+  }
+}
+
+// ── Keyframes ──────────────────────────────────────────────────
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes scrollDot {
+  0%   { opacity: 1; top: 5px; }
+  80%  { opacity: 0; top: 16px; }
+  100% { opacity: 0; top: 5px; }
+}

@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/portfolio/browser"
+}

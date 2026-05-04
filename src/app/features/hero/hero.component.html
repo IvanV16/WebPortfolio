@@ -1,0 +1,31 @@
+<section class="hero">
+  <canvas #canvas class="hero__canvas" aria-hidden="true"></canvas>
+
+  <div class="container hero__content">
+    <div class="hero__text">
+      <p class="hero__greeting">{{ 'hero.greeting' | translate }}</p>
+      <h1 class="hero__role">{{ 'hero.role' | translate }}</h1>
+      <p class="hero__tagline">{{ 'hero.tagline' | translate }}</p>
+      <p class="hero__humor">{{ 'hero.humor' | translate }}</p>
+
+      <div class="hero__ctas">
+        <button class="btn btn--primary" (click)="scrollTo('projects')">
+          {{ 'hero.cta_work' | translate }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+        <button class="btn btn--outline" (click)="scrollTo('contact')">
+          {{ 'hero.cta_contact' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <div class="scroll-dot"></div>
+  </div>
+</section>

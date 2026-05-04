@@ -1,0 +1,44 @@
+@mixin container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-px);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin section {
+  padding: var(--section-padding);
+}
+
+@mixin glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+}
+
+@mixin hover-lift {
+  transition: transform var(--transition), box-shadow var(--transition);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@mixin respond-to($bp) {
+  @if $bp == 'sm'  { @media (min-width: 640px)  { @content; } }
+  @else if $bp == 'md'  { @media (min-width: 768px)  { @content; } }
+  @else if $bp == 'lg'  { @media (min-width: 1024px) { @content; } }
+  @else if $bp == 'xl'  { @media (min-width: 1280px) { @content; } }
+}

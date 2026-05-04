@@ -1,0 +1,24 @@
+<section class="skills" id="skills">
+  <div class="container">
+
+    <div class="section-header" [appAnimateOnScroll]="0">
+      <h2>{{ 'skills.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'skills.subtitle' | translate }}</p>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills__grid">
+      @for (group of groups; track group.labelKey; let i = $index) {
+        <div class="skill-group" [appAnimateOnScroll]="i * 70">
+          <h3 class="skill-group__label">{{ group.labelKey | translate }}</h3>
+          <div class="skill-group__tags">
+            @for (item of group.items; track item) {
+              <app-tag [text]="item" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

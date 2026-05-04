@@ -1,0 +1,40 @@
+@use '../../../styles/mixins' as m;
+
+.skills {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include m.respond-to('md') { grid-template-columns: repeat(2, 1fr); }
+  @include m.respond-to('lg') { grid-template-columns: repeat(3, 1fr); }
+}
+
+.skill-group {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: border-color var(--transition);
+
+  &:hover { border-color: var(--accent-glow); }
+}
+
+.skill-group__label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.skill-group__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}

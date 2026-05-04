@@ -1,0 +1,55 @@
+<section class="about" id="about">
+  <div class="container">
+
+    <div class="section-header" [appAnimateOnScroll]="0">
+      <h2>{{ 'about.title' | translate }}</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about__inner">
+      <div class="about__text" [appAnimateOnScroll]="80">
+        <p>{{ 'about.p1' | translate }}</p>
+        <p>{{ 'about.p2' | translate }}</p>
+
+        <div class="about__languages">
+          <h3 class="lang-title">{{ 'about.languages' | translate }}</h3>
+          <ul class="lang-list">
+            <li>
+              <span class="lang-name">{{ 'about.spanish' | translate }}</span>
+              <span class="lang-level">{{ 'about.spanish_level' | translate }}</span>
+            </li>
+            <li>
+              <span class="lang-name">{{ 'about.english' | translate }}</span>
+              <span class="lang-level">{{ 'about.english_level' | translate }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about__visual" [appAnimateOnScroll]="120" aria-hidden="true">
+        <div class="about__card">
+          <div class="about__avatar">
+            <span>IV</span>
+          </div>
+          <p class="about__card-name">Ivan Vallejos</p>
+          <p class="about__card-role">Full-Stack Developer</p>
+          <div class="about__card-stats">
+            <div class="stat">
+              <span class="stat-num">8+</span>
+              <span class="stat-label">Years exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Coffee cups</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

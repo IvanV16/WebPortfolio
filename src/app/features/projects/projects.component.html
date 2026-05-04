@@ -1,0 +1,57 @@
+<section class="projects" id="projects">
+  <div class="container">
+
+    <div class="section-header" [appAnimateOnScroll]="0">
+      <h2>{{ 'projects.title' | translate }}</h2>
+      <p class="section-subtitle">{{ 'projects.subtitle' | translate }}</p>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.nameKey; let i = $index) {
+        <article class="project-card" [appAnimateOnScroll]="i * 80">
+          <!-- Screenshot placeholder -->
+          <div class="project-card__screenshot" aria-hidden="true">
+            <span class="screenshot-label">{{ project.nameKey | translate }}</span>
+          </div>
+
+          <div class="project-card__body">
+            <div class="project-card__top">
+              <h3 class="project-card__name">{{ project.nameKey | translate }}</h3>
+              <app-badge
+                [text]="project.statusKey | translate"
+                [variant]="project.variant" />
+            </div>
+
+            <p class="project-card__desc">{{ project.descKey | translate }}</p>
+            <p class="project-card__note">{{ project.noteKey | translate }}</p>
+
+            <div class="project-card__tech">
+              @for (t of project.tech; track t) {
+                <app-tag [text]="t" />
+              }
+            </div>
+
+            @if (project.link) {
+              <a class="btn btn--outline project-card__btn"
+                 [href]="project.link"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ 'projects.view_project' | translate }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

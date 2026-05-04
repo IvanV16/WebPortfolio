@@ -1,0 +1,197 @@
+@use '../../../styles/mixins' as m;
+
+.experience {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.timeline {
+  position: relative;
+}
+
+// ── Company (outer) ────────────────────────────────────────────
+.timeline__company {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline__company-dot {
+  position: absolute;
+  left: -7px;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-subtle);
+}
+
+.timeline__company-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.company-name {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.company-period {
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.company-role {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.65rem;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.company-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+// ── Clients (nested) ───────────────────────────────────────────
+.timeline__clients {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.client-item {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.client-item__connector {
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.client-item__card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+
+  &:hover, &.expanded {
+    border-color: var(--accent-glow);
+    background: var(--accent-subtle);
+  }
+}
+
+.client-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.client-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.client-company {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.client-location {
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.client-role {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.client-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.client-period {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.expand-icon {
+  display: inline-flex;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+
+  &.open { transform: rotate(180deg); }
+}
+
+// ── Expanded body ──────────────────────────────────────────────
+.client-item__body {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  animation: expandIn 0.22s ease;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+
+  li {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+  }
+}
+
+.client-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
