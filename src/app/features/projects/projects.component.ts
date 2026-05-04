@@ -33,7 +33,10 @@ export class ProjectsComponent {
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront'],
       screenshot: 'assets/images/mateapp-demo.gif',
-      links: [{ labelKey: 'projects.view_project', url: '#' }],
+      links: [
+        { labelKey: 'projects.view_project', url: 'https://dka445csg0xbb.cloudfront.net/' },
+        { labelKey: 'projects.view_admin_side', url: 'https://dka445csg0xbb.cloudfront.net/login' },
+      ],
     },
     {
       nameKey:   'projects.pedidosimple_name',
@@ -43,7 +46,10 @@ export class ProjectsComponent {
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk', 'RDS'],
       screenshot: 'assets/images/pedidosimple-demo.gif',
-      links: [{ labelKey: 'projects.view_project', url: '#' }],
+      links: [
+        { labelKey: 'projects.view_project', url: 'https://mundografico.pedidosimple.net/' },
+        { labelKey: 'projects.view_admin_side', url: 'https://mundografico.pedidosimple.net/admin/login' },
+      ],
     },
     {
       nameKey:   'projects.clario_name',
@@ -55,8 +61,8 @@ export class ProjectsComponent {
       screenshot: 'assets/images/clario-demo.gif',
       highlights: ['projects.clario_h1', 'projects.clario_h2', 'projects.clario_h3'],
       links: [
-        { labelKey: 'projects.clario_view_ph', url: 'https://www.producthunt.com' },
-        { labelKey: 'projects.clario_get', url: '#' },
+        { labelKey: 'projects.clario_view_ph', url: 'https://www.producthunt.com/products/clario-2' },
+        { labelKey: 'projects.clario_get', url: 'https://project-1aso3.vercel.app/' },
       ],
     },
     {
