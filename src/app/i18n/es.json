@@ -63,6 +63,15 @@
     "title": "Proyectos",
     "subtitle": "Lo que estoy construyendo ahora",
     "view_project": "Ver proyecto",
+    "clario_name": "Clario",
+    "clario_desc": "App de escritorio para encontrar y eliminar tus archivos más pesados en segundos. Una sola cosa, bien hecha.",
+    "clario_status": "LANZADO",
+    "clario_note": "Creada porque muchas herramientas de limpieza de disco son demasiado técnicas, feas o de pago.",
+    "clario_h1": "Publicado en Product Hunt",
+    "clario_h2": "Disponible en LemonSqueezy (pago)",
+    "clario_h3": "Aplicación de escritorio para Windows",
+    "clario_view_ph": "Ver en Product Hunt",
+    "clario_get": "Obtener Clario",
     "mateapp_name": "MateApp",
     "mateapp_desc": "App full-stack de gestión empresarial para inventario, ventas y agendamiento en pequeñas empresas.",
     "mateapp_status": "En desarrollo",
@@ -114,3 +123,4 @@
     "humor": "Hecho con Angular, Mates y sin cortes de luz durante el deploy."
   }
 }
+

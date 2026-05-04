@@ -25,6 +25,13 @@
 
             <p class="project-card__desc">{{ project.descKey | translate }}</p>
             <p class="project-card__note">{{ project.noteKey | translate }}</p>
+            @if (project.highlights?.length) {
+              <ul class="project-card__highlights">
+                @for (h of project.highlights; track h) {
+                  <li>{{ h | translate }}</li>
+                }
+              </ul>
+            }
 
             <div class="project-card__tech">
               @for (t of project.tech; track t) {
@@ -32,21 +39,25 @@
               }
             </div>
 
-            @if (project.link) {
-              <a class="btn btn--outline project-card__btn"
-                 [href]="project.link"
-                 target="_blank"
-                 rel="noopener noreferrer">
-                {{ 'projects.view_project' | translate }}
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-              </a>
+            @if (project.links.length) {
+              <div class="project-card__actions">
+                @for (link of project.links; track link.labelKey) {
+                  <a class="btn btn--outline project-card__btn"
+                     [href]="link.url"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                    {{ link.labelKey | translate }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                }
+              </div>
             }
           </div>
         </article>

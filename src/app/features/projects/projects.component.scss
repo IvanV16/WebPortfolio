@@ -1,4 +1,4 @@
-@use '../../../styles/mixins' as m;
+﻿@use '../../../styles/mixins' as m;
 
 .projects {
   padding: var(--section-padding);
@@ -14,7 +14,7 @@
   }
 }
 
-// ── Card ───────────────────────────────────────────────────────
+// â”€â”€ Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .project-card {
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   }
 }
 
-// ── Screenshot placeholder ─────────────────────────────────────
+// â”€â”€ Screenshot placeholder â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .project-card__screenshot {
   aspect-ratio: 16 / 7;
   background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
@@ -65,7 +65,7 @@
   z-index: 1;
 }
 
-// ── Card body ──────────────────────────────────────────────────
+// â”€â”€ Card body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .project-card__body {
   display: flex;
   flex-direction: column;
@@ -114,3 +114,20 @@
   font-size: var(--text-xs);
   padding: 0.5rem 1.1rem;
 }
+
+
+.project-card__highlights {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+

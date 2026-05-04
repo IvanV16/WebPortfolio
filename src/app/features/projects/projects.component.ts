@@ -11,7 +11,8 @@ interface Project {
   statusKey: string;
   variant:   string;
   tech:      string[];
-  link:      string | null;
+  highlights?: string[];
+  links: { labelKey: string; url: string }[];
 }
 
 @Component({
@@ -30,7 +31,7 @@ export class ProjectsComponent {
       statusKey: 'projects.mateapp_status',
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront'],
-      link:      '#',
+      links: [{ labelKey: 'projects.view_project', url: '#' }],
     },
     {
       nameKey:   'projects.pedidosimple_name',
@@ -39,7 +40,20 @@ export class ProjectsComponent {
       statusKey: 'projects.pedidosimple_status',
       variant:   'development',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk', 'RDS'],
-      link:      '#',
+      links: [{ labelKey: 'projects.view_project', url: '#' }],
+    },
+    {
+      nameKey:   'projects.clario_name',
+      descKey:   'projects.clario_desc',
+      noteKey:   'projects.clario_note',
+      statusKey: 'projects.clario_status',
+      variant:   'launched',
+      tech:      ['Tauri', 'Angular', 'Rust', 'Windows'],
+      highlights: ['projects.clario_h1', 'projects.clario_h2', 'projects.clario_h3'],
+      links: [
+        { labelKey: 'projects.clario_view_ph', url: 'https://www.producthunt.com' },
+        { labelKey: 'projects.clario_get', url: '#' },
+      ],
     },
     {
       nameKey:   'projects.localconnect_name',
@@ -48,7 +62,7 @@ export class ProjectsComponent {
       statusKey: 'projects.localconnect_status',
       variant:   'progress',
       tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'SQLite'],
-      link:      null,
+      links: [],
     },
   ];
 }
