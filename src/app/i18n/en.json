@@ -70,7 +70,7 @@
     "pedidosimple_name": "PedidoSimple",
     "pedidosimple_desc": "Order and client management platform for local businesses. Includes a public landing page and a full admin dashboard.",
     "pedidosimple_status": "In Development",
-    "pedidosimple_note": "Public landing + admin dashboard.",
+    "pedidosimple_note": "Deployed on AWS — S3, CloudFront, Elastic Beanstalk, RDS.",
     "localconnect_name": "LocalConnect",
     "localconnect_desc": "An experiment in social and local connection — not production-ready, but a useful proving ground for ideas around community platforms.",
     "localconnect_status": "In Progress",

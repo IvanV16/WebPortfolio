@@ -70,7 +70,7 @@
     "pedidosimple_name": "PedidoSimple",
     "pedidosimple_desc": "Plataforma de gestión de pedidos y clientes para negocios locales. Incluye landing pública y panel de administración completo.",
     "pedidosimple_status": "En desarrollo",
-    "pedidosimple_note": "Landing pública + panel de administración.",
+    "pedidosimple_note": "Desplegado en AWS — S3, CloudFront, Elastic Beanstalk, RDS.",
     "localconnect_name": "LocalConnect",
     "localconnect_desc": "Un experimento en conexión social y local — no está listo para producción, pero es un campo de prueba valioso para ideas sobre plataformas comunitarias.",
     "localconnect_status": "En progreso",

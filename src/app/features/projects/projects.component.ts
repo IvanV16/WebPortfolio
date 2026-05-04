@@ -38,7 +38,7 @@ export class ProjectsComponent {
       noteKey:   'projects.pedidosimple_note',
       statusKey: 'projects.pedidosimple_status',
       variant:   'development',
-      tech:      ['Angular v20', '.NET 10', 'PostgreSQL'],
+      tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'AWS', 'S3', 'CloudFront', 'Elastic Beanstalk', 'RDS'],
       link:      '#',
     },
     {
