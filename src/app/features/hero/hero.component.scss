@@ -1,5 +1,6 @@
 @use '../../../styles/mixins' as m;
 
+// ── Section shell ──────────────────────────────────────────────
 .hero {
   position: relative;
   min-height: 100vh;
@@ -18,18 +19,26 @@
   opacity: 0.6;
 }
 
+// ── Two-column grid ────────────────────────────────────────────
 .hero__content {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
   align-items: center;
-  justify-content: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
+
+  @include m.respond-to('lg') {
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    padding-bottom: 4rem;
+  }
 }
 
+// ── Text column ────────────────────────────────────────────────
 .hero__text {
-  max-width: 700px;
   text-align: center;
 
   @include m.respond-to('lg') { text-align: left; }
@@ -45,7 +54,7 @@
 }
 
 .hero__role {
-  font-size: clamp(2rem, 5vw, var(--text-5xl));
+  font-size: clamp(1.85rem, 4.5vw, var(--text-5xl));
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 1.25rem;
@@ -56,7 +65,7 @@
 .hero__tagline {
   font-size: var(--text-lg);
   color: var(--text-secondary);
-  max-width: 520px;
+  max-width: 500px;
   margin: 0 auto 1rem;
   animation: fadeSlideUp 0.7s 0.2s ease both;
 
@@ -69,8 +78,6 @@
   color: var(--text-muted);
   margin-bottom: 2.5rem;
   animation: fadeSlideUp 0.7s 0.3s ease both;
-
-  &::before { content: ''; }
 }
 
 .hero__ctas {
@@ -81,6 +88,95 @@
   animation: fadeSlideUp 0.7s 0.4s ease both;
 
   @include m.respond-to('lg') { justify-content: flex-start; }
+}
+
+// ── Photo column ───────────────────────────────────────────────
+.hero__photo {
+  // Mobile: photo above text, centered
+  order: -1;
+  display: flex;
+  justify-content: center;
+  animation: fadeSlideUp 0.7s 0.5s ease both;
+
+  @include m.respond-to('lg') {
+    order: 0; // right column via natural DOM order
+    justify-content: center;
+  }
+}
+
+// ── Photo frame & effects ──────────────────────────────────────
+.hero__photo-frame {
+  position: relative;
+  isolation: isolate;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 60%, #60A5FA 100%);
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.25),
+    0 0 30px rgba(59, 130, 246, 0.30),
+    0 0 70px rgba(59, 130, 246, 0.12);
+  transition: box-shadow var(--transition-slow);
+
+  @include m.respond-to('lg') {
+    width: 360px;
+    height: 360px;
+  }
+
+  &:hover {
+    box-shadow:
+      0 0 0 3px rgba(59, 130, 246, 0.4),
+      0 0 40px rgba(59, 130, 246, 0.45),
+      0 0 90px rgba(59, 130, 246, 0.18);
+  }
+}
+
+// ── Actual photo ───────────────────────────────────────────────
+.hero__photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+
+  // Duotone: strip the image's own colour so it blends with the blue background
+  mix-blend-mode: luminosity;
+  opacity: 0.88;
+}
+
+// ── Blue tint overlay (second duotone layer) ───────────────────
+// Adds a directional blue cast that prevents the image reading as pure greyscale
+.hero__photo-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    160deg,
+    rgba(59, 130, 246, 0.28) 0%,
+    rgba(37,  99, 235, 0.10) 60%,
+    rgba(96, 165, 250, 0.22) 100%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+// ── Monogram placeholder (shown when photo file not yet added) ─
+.hero__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.04em;
+    user-select: none;
+  }
 }
 
 // ── Scroll hint ────────────────────────────────────────────────

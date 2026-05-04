@@ -5,6 +5,7 @@ import {
   ViewChild,
   ElementRef,
   inject,
+  signal,
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
@@ -26,9 +27,13 @@ interface Particle {
 export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas') canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  private platformId = inject(PLATFORM_ID);
-  private raf = 0;
+  private platformId  = inject(PLATFORM_ID);
+  private raf         = 0;
   private resizeHandler!: () => void;
+
+  // Falls back to the monogram placeholder when the image file isn't present yet
+  photoReady = signal(true);
+  onPhotoError() { this.photoReady.set(false); }
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -43,9 +48,9 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
 
   private initCanvas() {
     const canvas = this.canvasRef.nativeElement;
-    const ctx = canvas.getContext('2d')!;
-    const COUNT = 55;
-    const MAX_DIST = 130;
+    const ctx    = canvas.getContext('2d')!;
+    const COUNT  = 55;
+    const MAX    = 130;
 
     const resize = () => {
       canvas.width  = canvas.offsetWidth;
@@ -83,12 +88,12 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
           const dx   = particles[i].x - particles[j].x;
           const dy   = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < MAX_DIST) {
+          if (dist < MAX) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(59,130,246,${(1 - dist / MAX_DIST) * 0.18})`;
-            ctx.lineWidth = 0.6;
+            ctx.strokeStyle = `rgba(59,130,246,${(1 - dist / MAX) * 0.18})`;
+            ctx.lineWidth   = 0.6;
             ctx.stroke();
           }
         }
