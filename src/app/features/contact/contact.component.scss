@@ -20,6 +20,13 @@
   @include m.respond-to('lg') { grid-template-columns: 1fr 1fr; }
 }
 
+// ── Left column ────────────────────────────────────────────────
+.contact__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 // ── Social links ───────────────────────────────────────────────
 .contact__links {
   display: flex;
@@ -75,6 +82,12 @@
 .contact-link__value {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+}
+
+// ── CV download button ─────────────────────────────────────────
+.cv-download-btn {
+  width: 100%;
+  justify-content: center;
 }
 
 // ── Form ───────────────────────────────────────────────────────
