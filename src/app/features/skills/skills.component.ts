@@ -40,12 +40,11 @@ export class SkillsComponent {
         'Clean Architecture',
         'SOLID Principles',
         'Agile / Scrum',
-        'AI-assisted development',
-        'ChatGPT',
-        'Codex',
-        'Claude',
-        'Claude Code',
       ],
+    },
+    {
+      labelKey: 'skills.devTools',
+      items: ['AI-assisted development', 'ChatGPT', 'Codex', 'Claude', 'Claude Code'],
     },
   ];
 }

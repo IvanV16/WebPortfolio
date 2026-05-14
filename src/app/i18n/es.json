@@ -93,7 +93,8 @@
     "backend": "Backend",
     "database": "Base de datos",
     "cloud": "Cloud & DevOps",
-    "tools": "Herramientas y prácticas"
+    "tools": "Arquitectura y prácticas",
+    "devTools": "Herramientas de desarrollo"
   },
   "about": {
     "title": "Sobre mí",
@@ -125,4 +126,3 @@
     "humor": "Hecho con Angular, Mates y sin cortes de luz durante el deploy."
   }
 }
-

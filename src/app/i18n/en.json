@@ -93,7 +93,8 @@
     "backend": "Backend",
     "database": "Database",
     "cloud": "Cloud & DevOps",
-    "tools": "Tools & Practices"
+    "tools": "Architecture & Practices",
+    "devTools": "Development Tools"
   },
   "about": {
     "title": "About",
@@ -125,4 +126,3 @@
     "humor": "Built with Angular, Mates, and no outages during deploy."
   }
 }
-
