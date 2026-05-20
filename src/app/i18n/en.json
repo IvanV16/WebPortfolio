@@ -54,10 +54,13 @@
     "internal_location": "Argentina",
     "internal_role": "Full Stack Developer",
     "internal_period": "2017 – 2026",
-    "internal_b1": "Developed internal tools for client and user management.",
-    "internal_b2": "Contributed to company website and internal platforms.",
-    "internal_b3": "Worked on multiple web applications across different domains.",
-    "internal_b4": "Built a single-page simulation landing (SPA) consuming REST APIs."
+    "internal_b1": "Served as the sole developer on multiple internal projects, owning the full technical scope in architecture decisions.",
+    "internal_b2": "Defined stack and architecture for each project, selecting technologies based on business requirements.",
+    "internal_b3": "Participated in regular client-facing meetings (weekly cadence), translating business needs into technical solutions.",
+    "internal_b4": "Coordinated directly with the designer and PM throughout the development lifecycle.",
+    "internal_b5": "Conducted code reviews and enforced coding standards and best practices.",
+    "internal_b6": "Developed internal tools for client and user management.",
+    "internal_b7": "Built a single-page simulation landing with REST API integration."
   },
   "projects": {
     "title": "Projects",

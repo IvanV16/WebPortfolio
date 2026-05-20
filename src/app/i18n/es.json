@@ -54,10 +54,13 @@
     "internal_location": "Argentina",
     "internal_role": "Desarrollador Full Stack",
     "internal_period": "2017 – 2026",
-    "internal_b1": "Desarrollé herramientas internas para gestión de clientes y usuarios.",
-    "internal_b2": "Contribuí al sitio de la empresa y a plataformas internas.",
-    "internal_b3": "Trabajé en múltiples aplicaciones web de distintos dominios.",
-    "internal_b4": "Construí una landing de simulación SPA consumiendo APIs REST."
+    "internal_b1": "Desarrollador único en múltiples proyectos internos, con ownership completo desde las decisiones de arquitectura.",
+    "internal_b2": "Definición de stack tecnológico y arquitectura de cada proyecto en función de los requerimientos de negocio.",
+    "internal_b3": "Participación en reuniones regulares con el cliente (cadencia semanal), traduciendo necesidades de negocio en soluciones técnicas.",
+    "internal_b4": "Coordinación directa con diseñador y PM durante todo el ciclo de desarrollo.",
+    "internal_b5": "Realización de code reviews y aplicación de estándares y buenas prácticas de código.",
+    "internal_b6": "Desarrollo de aplicación interna de gestión de clientes y usuarios.",
+    "internal_b7": "Desarrollo de landing interactiva tipo simulador (SPA) con consumo de APIs REST."
   },
   "projects": {
     "title": "Proyectos",
