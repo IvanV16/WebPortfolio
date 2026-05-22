@@ -71,9 +71,9 @@ export class ProjectsComponent {
       noteKey:   'projects.localconnect_note',
       statusKey: 'projects.localconnect_status',
       variant:   'progress',
-      tech:      ['Angular v20', '.NET 10', 'PostgreSQL', 'SQLite'],
+      tech:      ['Angular v20', '.NET 10', 'SQL Server', 'Azure', 'App Service', 'Blob Storage', 'Azure SQL'],
       screenshot: 'assets/images/localconnect-demo.gif',
-      links: [],
+      links: [{ labelKey: 'projects.view_site', url: 'https://localconnectweb.z6.web.core.windows.net/' }],
     },
   ];
 }
