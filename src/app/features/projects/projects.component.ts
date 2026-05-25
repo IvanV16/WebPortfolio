@@ -8,6 +8,7 @@ interface Project {
   nameKey:   string;
   descKey:   string;
   noteKey:   string;
+  note2Key?: string;
   statusKey: string;
   variant:   string;
   tech:      string[];
@@ -69,6 +70,7 @@ export class ProjectsComponent {
       nameKey:   'projects.localconnect_name',
       descKey:   'projects.localconnect_desc',
       noteKey:   'projects.localconnect_note',
+      note2Key:  'projects.localconnect_note_2',
       statusKey: 'projects.localconnect_status',
       variant:   'progress',
       tech:      ['Angular v20', '.NET 10', 'SQL Server', 'Azure', 'App Service', 'Blob Storage', 'Azure SQL'],

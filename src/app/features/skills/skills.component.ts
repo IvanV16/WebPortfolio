@@ -31,7 +31,18 @@ export class SkillsComponent {
     },
     {
       labelKey: 'skills.cloud',
-      items: ['AWS', 'S3 / CloudFront', 'Elastic Beanstalk', 'RDS', 'Azure', 'CI/CD Pipelines'],
+      items: [
+        'AWS',
+        'S3 / CloudFront',
+        'Elastic Beanstalk',
+        'RDS',
+        'Azure',
+        'Azure Storage Account',
+        'Blob Storage',
+        'Azure SQL',
+        'Azure App Service',
+        'CI/CD Pipelines',
+      ],
     },
     {
       labelKey: 'skills.tools',

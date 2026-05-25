@@ -32,6 +32,9 @@
 
             <p class="project-card__desc">{{ project.descKey | translate }}</p>
             <p class="project-card__note">{{ project.noteKey | translate }}</p>
+            @if (project.note2Key) {
+              <p class="project-card__note">{{ project.note2Key | translate }}</p>
+            }
             @if (project.highlights?.length) {
               <ul class="project-card__highlights">
                 @for (h of project.highlights; track h) {

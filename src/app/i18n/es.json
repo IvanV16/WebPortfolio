@@ -88,7 +88,8 @@
     "localconnect_name": "LocalConnect",
     "localconnect_desc": "Un experimento en conexión social y local — no está listo para producción, pero es un campo de prueba valioso para ideas sobre plataformas comunitarias.",
     "localconnect_status": "En progreso",
-    "localconnect_note": "Experimento honesto, no un producto terminado."
+    "localconnect_note": "Experimento honesto, no un producto terminado.",
+    "localconnect_note_2": "Desplegado en Azure — Storage Account, App Service, Azure SQL Database."
   },
   "skills": {
     "title": "Habilidades",

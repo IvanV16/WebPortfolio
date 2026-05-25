@@ -88,7 +88,8 @@
     "localconnect_name": "LocalConnect",
     "localconnect_desc": "An experiment in social and local connection — not production-ready, but a useful proving ground for ideas around community platforms.",
     "localconnect_status": "In Progress",
-    "localconnect_note": "Honest experiment, not a finished product."
+    "localconnect_note": "Honest experiment, not a finished product.",
+    "localconnect_note_2": "Deployed on Azure — Storage Account, App Service, Azure SQL Database."
   },
   "skills": {
     "title": "Skills",
