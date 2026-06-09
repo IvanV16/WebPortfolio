@@ -44,7 +44,7 @@ export class ExperienceComponent {
       prefix: 'sa',
       tech: ['Angular', '.NET', 'SQL Server', 'REST API'],
       expanded: false,
-      bullets: ['b1', 'b2', 'b3'],
+      bullets: ['b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7'],
     },
     {
       prefix: 'internal',
