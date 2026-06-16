@@ -102,6 +102,7 @@
     "backend": "Backend",
     "database": "Base de datos",
     "cloud": "Cloud & DevOps",
+    "versionControl": "Control de versiones",
     "tools": "Arquitectura y prácticas",
     "devTools": "Herramientas de desarrollo"
   },
