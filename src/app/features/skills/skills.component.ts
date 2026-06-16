@@ -37,15 +37,14 @@ export class SkillsComponent {
         '.NET Core',
         '.NET 5/6/8/10',
         'ASP.NET Core',
-        'Entity Framework',
-        'Migrations',
+        'Entity Framework',        
         'RESTful APIs',
         'SignalR',
       ],
     },
     {
       labelKey: 'skills.database',
-      items: ['SQL Server', 'PostgreSQL', 'Stored Procedures', 'Views'],
+      items: ['SQL Server', 'PostgreSQL'],
     },
     {
       labelKey: 'skills.cloud',
