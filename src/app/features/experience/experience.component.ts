@@ -21,20 +21,27 @@ export interface ClientEntry {
 export class ExperienceComponent {
   private i18n = inject(I18nService);
 
-  readonly sistedTech = [
-    '.NET 10',
-    'ASP.NET Core',
-    'ABP Framework',
-    'Blazor WebAssembly',
-    'DDD',
-    'EF Core',
-    'SQL Server',
-    'Azure',
-    'SignalR',
-    'Redis',
-    'Hangfire',
-    '.NET Aspire',
-  ];
+  sistedClients = signal<ClientEntry[]>([
+    {
+      prefix: 'pricose',
+      tech: [
+        '.NET 10',
+        'ASP.NET Core',
+        'ABP Framework',
+        'Blazor WebAssembly',
+        'DDD',
+        'EF Core',
+        'SQL Server',
+        'Azure',
+        'SignalR',
+        'Redis',
+        'Hangfire',
+        '.NET Aspire',
+      ],
+      expanded: false,
+      bullets: ['b1', 'b2', 'b3'],
+    },
+  ]);
 
   clients = signal<ClientEntry[]>([
     {
@@ -72,6 +79,12 @@ export class ExperienceComponent {
   toggle(index: number) {
     this.clients.update(list =>
       list.map((c, i) => (i === index ? { ...c, expanded: !c.expanded } : c))
+    );
+  }
+
+  toggleSisted(index: number) {
+    this.sistedClients.update(list =>
+      list.map((client, i) => (i === index ? { ...client, expanded: !client.expanded } : client))
     );
   }
 

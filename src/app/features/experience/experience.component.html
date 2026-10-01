@@ -20,14 +20,52 @@
           <span class="company-role">{{ 'experience.sisted_role' | translate }}</span>
         </div>
         <p class="company-desc">{{ 'experience.sisted_desc' | translate }}</p>
-        <ul class="bullets company-bullets">
-          <li>{{ 'experience.sisted_b1' | translate }}</li>
-          <li>{{ 'experience.sisted_b2' | translate }}</li>
-          <li>{{ 'experience.sisted_b3' | translate }}</li>
-        </ul>
-        <div class="client-tech company-tech">
-          @for (tech of sistedTech; track tech) {
-            <app-tag [text]="tech" />
+
+        <div class="timeline__clients">
+          @for (client of sistedClients(); track client.prefix; let i = $index) {
+            <div class="client-item" [appAnimateOnScroll]="100 + i * 60">
+              <div class="client-item__connector"></div>
+
+              <div class="client-item__card" [class.expanded]="client.expanded"
+                   (click)="toggleSisted(i)" role="button"
+                   [attr.aria-expanded]="client.expanded">
+
+                <div class="client-item__header">
+                  <div class="client-meta">
+                    <h4 class="client-company">
+                      {{ tk(client.prefix, 'company') }}
+                      <span class="client-location">— {{ tk(client.prefix, 'location') }}</span>
+                    </h4>
+                    <span class="client-role">{{ tk(client.prefix, 'role') }}</span>
+                  </div>
+                  <div class="client-right">
+                    <span class="client-period">{{ tk(client.prefix, 'period') }}</span>
+                    <span class="expand-icon" [class.open]="client.expanded" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                @if (client.expanded) {
+                  <div class="client-item__body">
+                    <ul class="bullets">
+                      @for (b of client.bullets; track b) {
+                        <li>{{ tk(client.prefix, b) }}</li>
+                      }
+                    </ul>
+                    <div class="client-tech">
+                      @for (tech of client.tech; track tech) {
+                        <app-tag [text]="tech" />
+                      }
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
           }
         </div>
       </div>
