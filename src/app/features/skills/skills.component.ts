@@ -22,12 +22,15 @@ export class SkillsComponent {
       items: [
         'Angular (v8-20)',
         'AngularJS',
+        'Blazor WebAssembly',
         'TypeScript',
         'JavaScript',
         'HTML',
         'CSS',
         'SCSS',
         'Bootstrap',
+        'Angular Material',
+        'PrimeNG',
       ],
     },
     {
@@ -37,18 +40,21 @@ export class SkillsComponent {
         '.NET Core',
         '.NET 5/6/8/10',
         'ASP.NET Core',
-        'Entity Framework',        
+        'ASP.NET MVC',
+        'ABP Framework',
+        'Entity Framework / EF Core',
+        'WCF',
         'RESTful APIs',
         'SignalR',
       ],
     },
     {
       labelKey: 'skills.database',
-      items: ['SQL Server', 'PostgreSQL'],
+      items: ['SQL Server', 'PostgreSQL', 'SQLite'],
     },
     {
       labelKey: 'skills.cloud',
-      items: ['AWS', 'Microsoft Azure', 'Azure DevOps', 'CI/CD Pipelines', 'IIS'],
+      items: ['AWS', 'Microsoft Azure', 'Azure DevOps', 'CI/CD Pipelines', 'Docker', 'IIS'],
     },
     {
       labelKey: 'skills.versionControl',
@@ -58,6 +64,7 @@ export class SkillsComponent {
       labelKey: 'skills.tools',
       items: [
         'Clean Architecture',
+        'Domain-Driven Design (DDD)',
         'SOLID Principles',
         'MVC',
         'MVVM',
@@ -66,11 +73,12 @@ export class SkillsComponent {
         'CQRS',
         'MediatR',
         'Agile Scrum',
+        'Unit & Integration Testing',
       ],
     },
     {
       labelKey: 'skills.devTools',
-      items: ['AI-assisted development', 'ChatGPT', 'Codex', 'Claude', 'Claude Code'],
+      items: ['AI-assisted development', 'ChatGPT', 'Codex', 'Claude', 'Claude Code', 'Cursor'],
     },
   ];
 }

@@ -23,11 +23,11 @@ export class ContactComponent {
 
   cvHref = computed(() =>
     this.i18n.lang() === 'en'
-      ? 'assets/docs/CV_IvanValjejos_EN.pdf'
+      ? 'assets/docs/CV_IvanVallejos_EN.pdf'
       : 'assets/docs/CV_IvanVallejos_ES.pdf'
   );
 
-  readonly EMAIL    = 'ivan.vd07@gmail.com';
+  readonly EMAIL    = 'ivan.vd89@gmail.com';
   readonly LINKEDIN = 'https://www.linkedin.com/in/ivan-vallejos-716a1415b';
   readonly GITHUB   = 'https://github.com/IvanV16';
 

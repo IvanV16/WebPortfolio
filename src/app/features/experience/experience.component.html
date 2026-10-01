@@ -9,6 +9,29 @@
 
     <div class="timeline">
 
+      <!-- Current role -->
+      <div class="timeline__company" [appAnimateOnScroll]="80">
+        <div class="timeline__company-dot"></div>
+        <div class="timeline__company-header">
+          <div class="company-info">
+            <h3 class="company-name">{{ 'experience.sisted_company' | translate }}</h3>
+            <span class="company-period">{{ 'experience.sisted_period' | translate }}</span>
+          </div>
+          <span class="company-role">{{ 'experience.sisted_role' | translate }}</span>
+        </div>
+        <p class="company-desc">{{ 'experience.sisted_desc' | translate }}</p>
+        <ul class="bullets company-bullets">
+          <li>{{ 'experience.sisted_b1' | translate }}</li>
+          <li>{{ 'experience.sisted_b2' | translate }}</li>
+          <li>{{ 'experience.sisted_b3' | translate }}</li>
+        </ul>
+        <div class="client-tech company-tech">
+          @for (tech of sistedTech; track tech) {
+            <app-tag [text]="tech" />
+          }
+        </div>
+      </div>
+
       <!-- Devlights outer -->
       <div class="timeline__company" [appAnimateOnScroll]="100">
         <div class="timeline__company-dot"></div>

@@ -16,6 +16,10 @@
   border-left: 2px solid var(--border-color);
 }
 
+.timeline__company + .timeline__company {
+  margin-top: 2rem;
+}
+
 .timeline__company-dot {
   position: absolute;
   left: -7px;
@@ -67,6 +71,14 @@
   color: var(--text-secondary);
   margin-bottom: 2rem;
   max-width: 560px;
+}
+
+.company-bullets {
+  max-width: 760px;
+}
+
+.company-tech {
+  padding-bottom: 1rem;
 }
 
 // ── Clients (nested) ───────────────────────────────────────────
